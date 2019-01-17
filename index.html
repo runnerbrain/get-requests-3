@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="float-grid.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Parks search app</title>
+</head>
+
+<body>
+    <header class="banner">
+        Parks search tool
+    </header>
+
+    <main>
+        <fieldset name="parks-list">
+            <legend>Parks Search</legend>
+            <form id="parks_list">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="states_list">List of states</label>
+                        <input type="text" name="states_list" id="states_list" placeholder="MI,OH,...,CA" class="textual-input" required />
+                    </div>
+                    <div class="col-3">
+                        <label for="max_results">Maximum results</label>
+                        <input type="text" name="max_results" id="max_results" placeholder="10" class="numerical-input" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><button class="button">Fetch</button></div>
+                </div>
+            </form>
+        </fieldset>
+        <section role="region" class="parks_list_area hidden">
+            <div class="row">
+                <div class="col-12">
+                    
+                    <h2>Parks list</h2>
+                    <ul class="parks_list"></ul>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
